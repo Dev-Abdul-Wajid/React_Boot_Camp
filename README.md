@@ -18,8 +18,8 @@
     We can create them using two way's one inside a contructor hook and second is outside the hook.
 
 4. Lifecycle Hooks
-
-    Constructor:
+                                                                        MOUNTING PHASE
+    constructor(props):
         The constructor is the first method called when the component is instantiated. It's used to initialize the component's state and bind event handlers.
         If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React class component.
 
@@ -31,3 +31,25 @@
 
         If you need to interact with the browser, perform your work in componentDidMount() or the other lifecycle methods instead. Keeping render() pure makes components easier to think about.
 
+    componentDidMount():
+        This method is called immediately after the component is mounted (inserted into the DOM). It's commonly used to initiate API calls, set up subscriptions, or perform any necessary DOM operations.
+
+                                                            UPDATING PHASE (PROPS CHANGE, SET STATE)
+
+    shouldComponentUpdate(nextProps, nextState)
+        This method is called before re-rendering the component. It determines if the component should update by returning a boolean value (true to update, false to skip re-rendering). It's often used to optimize performance by preventing unnecessary updates.
+
+    getSnapshotBeforeUpdate(prevProps, prevState)
+        This method is invoked right before the most recently rendered output is committed to e.g. the DOM. It enables your component to capture some information from the DOM (e.g. scroll position) before it is potentially changed. Any value returned by this lifecycle method will be passed as a parameter to componentDidUpdate().
+
+        Example: https://legacy.reactjs.org/docs/react-component.html#getsnapshotbeforeupdate
+
+    componentDidUpdate(prevProps, prevState, snapshot)
+        This method is called immediately after the component updates (re-render). It allows you to perform side effects, such as making API calls based on prop or state changes. It's important to check if the component's props or state have changed before initiating additional actions to avoid infinite loops.
+
+        componentDidUpdate() will not be invoked if shouldComponentUpdate() returns false.
+
+                                                                        UNMOUNTING PHASE
+
+    componentWillUnmount()
+        This method is called when a component is about to be removed from the DOM. It is used to perform cleanup tasks such as removing event listeners, cleanIntervals and canceling API requests.
