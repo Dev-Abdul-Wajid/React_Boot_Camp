@@ -1,19 +1,33 @@
 import './App.css';
 import React from 'react';
 // import FirstComponent from './components/FirstComponent';
-// import ThirdComponent from './components/Third Component';
+// import ThirdComponent from './components/ThirdComponent';
 // import SecondComponent from './components/SecondComponent';
-// import FourthComponent from './components/FourthComponen';
+// import FourthComponent from './components/FourthComponent';
 // import FifthComponent from './components/FifthComponent';
 // import SixthComponent from './components/SixthComponent';
 // import SeventhComponent from './components/SeventhComponent';
 // import EighthComponent from './components/EighthComponent';
+// import NinthComponent from './components/NinthComponent';
+// import TenthComponent from './components/TenthComponent';
+// import EleventhComponent from './components/EleventhComponent';
+// import TwelfthComponent from './components/TwelfthComponent';
 
 // import { getYourName } from './util/helper';
 
 class App extends React.Component {
+  // state = { showTwelfthComponent: false };
+
+  // handleOnChange = () => {
+  //   this.setState({ showTwelfthComponent: !this.state.showTwelfthComponent });
+  // };
+
   render() {
     // const gender = 'Male';
+    // const propsObj = {
+    //   class: 'higher',
+    //   grade: 'A+'
+    // };
 
     return (
       <div className="App">
@@ -29,6 +43,7 @@ class App extends React.Component {
           name="John"
           gender={gender}
           secondName={getYourName()}
+          {...propsObj}
         /> */}
 
         {/* TWO-WAY binding in react
@@ -51,6 +66,19 @@ class App extends React.Component {
 
         {/* render
         <EighthComponent /> */}
+
+        {/* componentDidMount
+        <NinthComponent /> */}
+
+        {/* shouldComponentUpdate
+        <TenthComponent /> */}
+
+        {/* componentDidUpdate
+        <EleventhComponent /> */}
+
+        {/* componentWillUnmount
+        <input type='text' value="" onChange={this.handleOnChange} />
+        {this.state.showTwelfthComponent && <TwelfthComponent />} */}
       </div>
     );
   }
