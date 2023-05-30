@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+### Functional components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Functional components are some of the more common components that will come across while working in React. These are simply JavaScript functions. We can create a functional component in React by writing a JavaScript function. These functions may or may not receive data as parameters. In the functional Components, the return value is the JSX code to render.
 
-## Available Scripts
+The shift towards functional components in React is driven by their simplicity, performance benefits, reusability
 
-In the project directory, you can run:
 
-### `npm start`
+####
+Two-way data binding typically involves passing data from a parent component to a child component through props and allowing the child component to update the parent component's state or data.
+#### UseState()
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Functional components lack a significant amount of features as compared to class-based components and they do not have access to dedicated state variables like class-based components. The gap is made up with the help of a special ReactJS concept called “hooks”. ReactJS has access to a special hook called useState().It is used to manage state within a functional component. The useState() hook allows you to declare a state variable and provides a way to update that variable, triggering a re-render of the component whenever the state changes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#####
 
-### `npm test`
+Functional components do not have access to lifecycle functions like class-based components do since lifecycle functions need to be defined within the boundaries of a class. A special React hook called useEffect() needs to be used. It is worth noting that useEffect() isn’t an exact duplicate of the lifecycle functions – it works and behaves in a slightly different manner.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+####
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Reasons: There are a few reasons why it’s recommended to use functional components over class components in React:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Simplicity and Readability:
+Function components are simpler and easier to read and understand compared to class components. They have a more straightforward syntax and do not require the use of the this keyword.
 
-### `npm run eject`
+#### No Need for Lifecycle Methods:
+Function components do not have lifecycle methods like componentDidMount, componentDidUpdate, or componentWillUnmount. Instead, they can use React's built-in Hooks like useEffect to achieve similar functionality.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Performance Optimization:
+Function components are generally more performant because they have a smaller memory footprint compared to class components. 
+###
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Hooks: Functional components can use the React hooks, which allows you to use state and other React features in functional components, while class components can’t.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Easier to test: 
+Easier to reuse: 
