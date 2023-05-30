@@ -4,6 +4,9 @@ Functional components are some of the more common components that will come acro
 
 The shift towards functional components in React is driven by their simplicity, performance benefits, reusability
 
+
+####
+Two-way data binding typically involves passing data from a parent component to a child component through props and allowing the child component to update the parent component's state or data.
 #### UseState()
 
 Functional components lack a significant amount of features as compared to class-based components and they do not have access to dedicated state variables like class-based components. The gap is made up with the help of a special ReactJS concept called “hooks”. ReactJS has access to a special hook called useState().It is used to manage state within a functional component. The useState() hook allows you to declare a state variable and provides a way to update that variable, triggering a re-render of the component whenever the state changes.
