@@ -4,6 +4,7 @@ import UserInfo from './UserInfo';
 
 const ConditionalFormComponent = () => {
   const [tab, setTab] = useState('user info');
+  const [skills, setSkills] = useState([]);
 
   return (
     <div className='mt-5'>
@@ -12,7 +13,7 @@ const ConditionalFormComponent = () => {
       <button className={`btn ${tab == 'skills' ? 'btn-success' : 'btn-secondary'}`} onClick={() => setTab('skills')}>Skills</button>
 
       {tab == 'user info' && <UserInfo />}
-      {tab == 'skills' && <SkillsPage />}
+      {tab == 'skills' && <SkillsPage skills={skills} setSkills={setSkills}  />}
     </div>
   );
 };

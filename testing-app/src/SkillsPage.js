@@ -3,22 +3,22 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const SkillsPage = () => {
+const SkillsPage = ({skills, setSkills}) => {
+
   const [experience, setExperience] = useState('');
-  const [skills, setSkills] = useState([]);
   const [newSkill, setNewSkill] = useState('');
 
   const addSkill = () => {
     if (newSkill.trim() !== '' && experience !== '') {
-      setSkills((prevSkills) => [...prevSkills, `${newSkill}, ${experience} year`]);
+      setSkills(() => [...skills, {name: newSkill, experience: experience}]);
       setNewSkill('');
       setExperience('')
 
-      // toast.success('Skill Added successfully!', {
-      //   position: toast.POSITION.TOP_CENTER,
-      //   autoClose: 1000,
-      //   hideProgressBar: true,
-      // });
+      toast.success('Skill Added successfully!', {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 1000,
+        hideProgressBar: true,
+      });
     }
   };
 
@@ -27,11 +27,11 @@ const SkillsPage = () => {
     updatedSkills.splice(index, 1);
     setSkills(updatedSkills);
 
-    // toast.info('Skill Deleted successfully!', {
-    //   position: toast.POSITION.TOP_CENTER,
-    //   autoClose: 1000,
-    //   hideProgressBar: true,
-    // });
+    toast.info('Skill Deleted successfully!', {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 1000,
+      hideProgressBar: true,
+    });
   };
 
   return (
@@ -45,7 +45,7 @@ const SkillsPage = () => {
       <ul>
         {skills.map((skill, index) => (
           <li key={index} className='mb-2'>
-            {skill}
+            {skill.name} - {skill.experience} years
             <button className='btn btn-danger mx-2' onClick={() => deleteSkill(index)}>Delete</button>
           </li>
         ))}
