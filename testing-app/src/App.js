@@ -1,9 +1,12 @@
 import './App.css';
+import FirstComponent from './FirstComponent';
+// import Login from './Login';
 
 function App() {
   return (
     <div className="App">
-      <h1>React App</h1>
+      <FirstComponent />
+      {/* <Login /> */}
     </div>
   );
 }
