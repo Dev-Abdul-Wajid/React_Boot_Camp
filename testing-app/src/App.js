@@ -11,7 +11,12 @@ import './App.css';
 // import Example5 from './useEffect/Example5'
 
 // import Example6 from './memo/Example6';
+
 import Example7 from './memo/Example7';
+import { Intro } from './useCallback/Intro';
+import Example8 from './useCallback/Example8';
+import Example9 from './useCallback/Example9';
+import Example10 from './useCallback/Example10';
 
 function App() {
   return (
@@ -30,7 +35,11 @@ function App() {
 
       {/* MEMO COMPONENT */}
       {/* <Example6 /> */}
-      <Example7 />
+      {/* <Example7 /> */}
+      <Intro />
+      {/* <Example8 /> */}
+      {/* <Example9 /> */}
+      {/* <Example10 /> */}
     </div>
   );
 }
