@@ -24,3 +24,18 @@
 
 ###### Usage
     Skipping recalculation with useMemo                  Example7.js
+
+
+### useCallback
+    https://react.dev/reference/react/useCallback
+
+### useRef
+    useRef is a React Hook that lets you reference a value that’s not needed for rendering. Changing a ref does not trigger a re-render.
+
+### forwardRef
+    forwardRef lets your component expose a DOM node to parent component with a ref.
+
+###### Usage
+    Referencing a value with a ref                      Index.jsx
+    Manipulating the DOM with a ref                     FocusTextInput.jsx
+    Exposing refs to your own component                 ExposingRefs.jsx

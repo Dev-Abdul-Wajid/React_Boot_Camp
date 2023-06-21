@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useEffect, useMemo } from 'react';
 
-export const Intro = () => {
+const Intro = () => {
   const [count, setCount] = useState(0);
 
 
@@ -22,3 +22,5 @@ export const Intro = () => {
     </div>
   );
 };
+
+export default Intro;
