@@ -1,4 +1,12 @@
 import './App.css';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
+import Home from './Routing/Home';
+import NotFound from './Routing/NotFound';
+import Users from './Routing/Users';
+import User from './Routing/User';
+import QueryParams from './Routing/QueryParams';
+
 
 // CONDITIONAL RENDERING...
 // import LoginForm from './auth/LoginForm';
@@ -61,6 +69,21 @@ function App() {
       {/* <Index /> */}
       {/* <FocusTextInput /> */}
       {/* <PlayPauseVideo /> */}
+      {/* <Home />
+      <NotFound /> */}
+
+      {/* Routing and navigation */}
+      {/* <Users /> */}
+      {/* <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/users/:id" element={<User />} />
+          <Route path="/params" element={<QueryParams />} />
+          <Route path="/*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter> */}
     </div>
   );
 }
