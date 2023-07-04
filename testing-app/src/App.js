@@ -7,6 +7,11 @@ import Users from './Routing/Users';
 import User from './Routing/User';
 import QueryParams from './Routing/QueryParams';
 
+import ThemeProvider from './contextApi/ThemeProvider';
+import Header from './contextApi/Header';
+import Content from './contextApi/Content';
+import Prop from './contextApi/Prop';
+
 
 // CONDITIONAL RENDERING...
 // import LoginForm from './auth/LoginForm';
@@ -84,6 +89,11 @@ function App() {
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter> */}
+      <ThemeProvider>
+        <Header />
+        <Content />
+      </ThemeProvider>
+      {/* <Prop /> */}
     </div>
   );
 }
